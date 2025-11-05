@@ -33,7 +33,7 @@ function LoginView() {
           <a href="javascript:void(0)" class="small text-secondary" onclick="openForgotModal()">Forgot?</a>
         </div>
       </form>
-      <div class="small text-secondary mt-3">Demo accounts: <code>doctor/doctor123</code>, <code>aarav/1234</code></div>
+      <div class="small text-secondary mt-3">Demo accounts: <code>admin/admin123</code></div>
     </div>
   </div>`;
 }
