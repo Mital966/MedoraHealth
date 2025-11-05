@@ -16,7 +16,7 @@ function LoginView() {
   <div class="container py-5" style="max-width: 520px;">
     <div class="card-glass p-4">
       <div class="h4 mb-3 text-center">Medora Health – COVID</div>
-      <div class="text-secondary text-center mb-4">Login as Doctor or Patient</div>
+      <div class="text-secondary text-center mb-4">Login as Admin, Doctor or Patient</div>
       <form id="login-form" class="row g-3">
         <div class="col-12">
           <label class="form-label">Username</label>
