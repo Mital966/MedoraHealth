@@ -5,6 +5,14 @@ const DB_KEYS = {
   SESSION: 'medora:session'
 };
 
+// global reactive cache
+let liveSummaryState = {
+  summary: { affected: 0, cured: 0, notAffected: 0, death: 0, total: 0 },
+  stateCounts: { affected: {}, cured: {}, death: {} },
+  ageBuckets: { "0-17": 0, "18-35": 0, "36-55": 0, "56+": 0 },
+  topDeaths: []
+};
+
 const STATES = [
   "--select--", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh",
   "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland",
@@ -683,13 +691,7 @@ function getCurrentUser() {
   return users.find(u => u.id === session.userId) || null;
 }
 
-// global reactive cache
-let liveSummaryState = {
-  summary: { affected: 0, cured: 0, notAffected: 0, death: 0, total: 0 },
-  stateCounts: { affected: {}, cured: {}, death: {} },
-  ageBuckets: { "0-17": 0, "18-35": 0, "36-55": 0, "56+": 0 },
-  topDeaths: []
-};
+
 
 function refreshLiveSummary() {
   const updated = computeSummary();
